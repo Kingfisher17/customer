@@ -5,6 +5,8 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 @Data
@@ -13,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class Customer {
 	
 	@Id // primary key
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
 	private String mob;
